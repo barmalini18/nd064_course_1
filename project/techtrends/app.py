@@ -53,12 +53,22 @@ def about():
 #    A JSON response containing the result: OK - healthy message
 @app.route('/healthz')
 def healthz():
-    response = app.response_class(
-            response=json.dumps({"result":"OK - healthy"}),
-            status=200,
-            mimetype='application/json'
-    )
-    log_message('Test debug message')
+    try:
+        connection = get_db_connection()
+        connection.cursor()
+        connection.execute('SELECT * FROM posts')
+        connection.close()
+        response = app.response_class(
+                response=json.dumps({"result":"OK - healthy"}),
+                status=200,
+                mimetype='application/json'
+        )
+    except Exception:
+         response = app.response_class(
+                response=json.dumps({"result":"Error - unhealthy"}),
+                status=500,
+                mimetype='application/json'
+        )
     return response
 
 #Build a /metrics endpoint that would return the following:
