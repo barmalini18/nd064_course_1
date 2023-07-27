@@ -15,6 +15,8 @@ to
 
 https://github.com/barmalini18/nd064_course_1
 
+https://github.com/barmalini18/nd064_course_1/blob/main/project/screenshots/01.%20fork%20Udacity%20project.png
+
 Done.
 
 2. Install Python using the instructions provided in the official Python documentation
