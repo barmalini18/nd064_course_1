@@ -46,7 +46,6 @@ def about():
     return render_template('about.html')
 
 # Build the /healthz endpoint for the TechTrends application. The endpoint should return the following response:
-#
 #    An HTTP 200 status code
 #    A JSON response containing the result: OK - healthy message
 @app.route('/healthz')
@@ -58,6 +57,26 @@ def healthz():
     )
     app.logger.debug(logger_message('Test debug message'))
     return response
+
+#Build a /metrics endpoint that would return the following:
+#   An HTTP 200 status code
+#   A JSON response with the following metrics:
+#       Total amount of posts in the database
+#       Total amount of connections to the database. For example, accessing an article will query the database, hence will count as a connection.
+def metrics():
+    connection = get_db_connection()
+    posts = connection.execute('SELECT * FROM posts').fetchall()
+    response = app.response_class(
+            response=json.dumps({"db_connection_count": connection_count, "post_count": len(posts)}),
+            status=200,
+            mimetype='application/json'
+    )
+    connection.close()
+    return response
+
+
+
+
 
 
 # Define the post creation functionality 
