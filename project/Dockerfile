@@ -1,15 +1,16 @@
 FROM python:3.8
 LABEL maintainer="Taras Bahnyuk"
 
-WORKDIR /app
-COPY . /app
+WORKDIR /usr/src/app
 
-# install app requirements
-RUN pip install -r requirements.txt
+COPY ./techtrends/requirements.txt ./
 
-# initialize the database
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY ./techtrends ./
+
 RUN python init_db.py
 
-# command to run on container start
 EXPOSE 3111
+
 CMD [ "python", "app.py" ]
