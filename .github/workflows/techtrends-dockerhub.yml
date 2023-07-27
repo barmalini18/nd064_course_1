@@ -30,4 +30,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: barmalini/techtrends:$(date +%s)
+          tags: barmalini/techtrends
