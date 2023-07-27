@@ -24,7 +24,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: ./project
-          file: Dockerfile
+          context: .
           push: true
           tags: barmalini/techtrends
