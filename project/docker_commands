@@ -16,7 +16,7 @@ c:\Users\Taras\Desktop\project>docker logs 15dfbd29cc4d45a1318c275053b7100e04bb9
    Use a production WSGI server instead.
  * Debug mode: off
 WARNING:werkzeug: * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
+WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
 INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:30:50] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:30:50] "GET /static/css/main.css HTTP/1.1" 200 -
@@ -53,3 +53,25 @@ INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:36:42] "GET /static/css/main.css HT
 INFO:app:07/27/2023, 19:36:44 | Article "1" retrieved.
 INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:36:44] "GET /8 HTTP/1.1" 200 -
 INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:36:44] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:07/27/2023, 19:43:11 | Article "1" retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:11] "GET /8 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:11] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:11] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:07/27/2023, 19:43:16 | The "About Us" page is retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:16] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:16] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:17] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:07/27/2023, 19:43:18 | Article "2020 CNCF Annual Report" retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:18] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:18] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:20] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:07/27/2023, 19:43:22 | Article "Kubernetes v1.20 Release Notes" retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:22] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:22] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:33] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:07/27/2023, 19:43:34 | Article "CNCF Cloud Native Interactive Landscape" retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:34] "GET /4 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Jul/2023 19:43:34] "GET /static/css/main.css HTTP/1.1" 304 -
