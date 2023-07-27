@@ -31,4 +31,4 @@ jobs:
           file: ./techtrends/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: barmalini18/techtrends:latest
+          tags: barmalini/techtrends:latest
