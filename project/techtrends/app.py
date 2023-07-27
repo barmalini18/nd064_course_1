@@ -78,6 +78,7 @@ def healthz():
 #   A JSON response with the following metrics:
 #       Total amount of posts in the database
 #       Total amount of connections to the database. For example, accessing an article will query the database, hence will count as a connection.
+@app.route('/metrics')
 def metrics():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
