@@ -45,6 +45,21 @@ def post(post_id):
 def about():
     return render_template('about.html')
 
+# Build the /healthz endpoint for the TechTrends application. The endpoint should return the following response:
+#
+#    An HTTP 200 status code
+#    A JSON response containing the result: OK - healthy message
+@app.route('/healthz')
+def healthz():
+    response = app.response_class(
+            response=json.dumps({"result":"OK - healthy"}),
+            status=200,
+            mimetype='application/json'
+    )
+    app.logger.debug(logger_message('Test debug message'))
+    return response
+
+
 # Define the post creation functionality 
 @app.route('/create', methods=('GET', 'POST'))
 def create():
