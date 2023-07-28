@@ -2,8 +2,8 @@ FROM python:3.8
 LABEL maintainer="Taras Bahnyuk"
 
 COPY . /app
-WORKDIR /app
-RUN pip install -r ./techtrends/requirements.txt
+WORKDIR /app/techtrends
+RUN pip install -r requirements.txt
 #command to initialized the database
 RUN python init_db.py
 # command to run on container start
