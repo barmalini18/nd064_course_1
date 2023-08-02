@@ -1,0 +1,5 @@
+apiVersion: v2
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: {{ .Values.namespace.name }}
