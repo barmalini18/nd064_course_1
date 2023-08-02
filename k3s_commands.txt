@@ -1,0 +1,16 @@
+vagrant up
+vagrant plugin install vagrant-scp
+vagrant scp kubernetes .
+vagrant ssh
+
+curl -sfL https://get.k3s.io | sh -
+
+kubectl version --output=yaml|json
+kubectl config current-context
+
+kubectl apply -f deploy.yaml
+kubectl apply -f namespace.yaml
+kubectl apply -f service.yaml
+
+kubectl get no
+kubectl get all -n sandbox
