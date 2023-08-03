@@ -31,5 +31,4 @@ spec:
               path: {{ .Values.probes.liveness.path }}
               port: {{ .Values.probes.liveness.port }}
 
-
-status:{}
+status: {}
