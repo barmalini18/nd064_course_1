@@ -32,3 +32,4 @@ spec:
               port: {{ .Values.probes.liveness.port }}
 
 
+status:{}
