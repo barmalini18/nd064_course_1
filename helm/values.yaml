@@ -1,27 +1,23 @@
-namespace:
-  name: sandbox
+namespace: sandbox
 replicaCount: 1
-
 image:
   repository: techtrends
   tag: latest
   pullPolicy: IfNotPresent
-
+resources:
+  requests:
+    memory: "64Mi"
+    cpu: "250m"
+  limits:
+    memory: "128Mi"
+    cpu: "500m"
 service:
   name: techtrends
+  type: ClusterIP
   port: 4111
   targetPort: 3111
   protocol: TCP
-  type: ClusterIP
-
-resources:
-  requests:
-    memory: 64Mi
-    cpu: 250m
-  limits:
-    memory: 128Mi
-    cpu: 500m
-
+containerPort: 3111
 probes:
   liveness:
     path: /healthz
@@ -29,5 +25,3 @@ probes:
   readiness:
     path: /healthz
     port: 3111
-
-containerPort: 3111
