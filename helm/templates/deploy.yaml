@@ -34,3 +34,5 @@ spec:
           httpGet:
             path: {{ .Values.probes.readiness.path }}
             port: {{ .Values.probes.readiness.port }}
+            
+status: {}
