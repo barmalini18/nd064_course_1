@@ -36,3 +36,4 @@ spec:
             port: {{ .Values.probes.readiness.port }}
             
 status: {}
+spec: {}
