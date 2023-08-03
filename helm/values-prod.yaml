@@ -1,15 +1,13 @@
-namespace:
-  name: prod
+namespace: prod
 service:
   port: 7111
+replicaCount: 5
 image:
   pullPolicy: Always
-replicaCount: 5
-resources: 
-  requests: 
+resources:
+  requests:
     memory: "128Mi"
-    CPU: "350m"
+    cpu: "350m"
   limits:
     memory: "256Mi"
-    CPU: "500m"
-replicaCount: 5
+    cpu: "500m"
