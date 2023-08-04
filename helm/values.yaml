@@ -7,11 +7,11 @@ image:
   pullPolicy: IfNotPresent
 resources:
   requests:
-    memory: "64Mi"
     cpu: "250m"
+    memory: "64Mi"    
   limits:
-    memory: "128Mi"
     cpu: "500m"
+    memory: "128Mi"    
 service:
   name: techtrends
   type: ClusterIP
