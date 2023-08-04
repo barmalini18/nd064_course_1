@@ -1,7 +1,7 @@
-namespace: prod
+namespace: 
+  name: prod
 service:
   port: 7111
-replicaCount: 5
 image:
   pullPolicy: Always
 resources:
@@ -11,3 +11,4 @@ resources:
   limits:
     memory: "256Mi"
     cpu: "500m"
+replicaCount: 5
