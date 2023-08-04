@@ -17,22 +17,23 @@ spec:
       - name: techtrends
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        resources:
-          requests:
-            memory: {{ .Values.resources.requests.memory }}
-            cpu: {{ .Values.resources.requests.cpu }}
-          limits:
-            memory: {{ .Values.resources.limits.memory }}
-            cpu: {{ .Values.resources.limits.cpu }}
         ports:
         - containerPort: {{ .Values.containerPort }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}            
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
         livenessProbe:
           httpGet:
-            path: {{ .Values.probes.liveness.path }}
             port: {{ .Values.probes.liveness.port }}
+            path: {{ .Values.probes.liveness.path }}
         readinessProbe:
           httpGet:
-            path: {{ .Values.probes.readiness.path }}
             port: {{ .Values.probes.readiness.port }}
+            path: {{ .Values.probes.readiness.path }}
+
             
 status: {}
